@@ -1,0 +1,15 @@
+.page
+{
+    display: grid;
+
+    min-height: 100vh;
+
+    gap: 0.5rem;
+    place-content: center;
+    justify-items: center;
+}
+
+.message a
+{
+    color: var(--color-blue);
+}
