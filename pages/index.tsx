@@ -4,7 +4,7 @@ import Meta from "~/components/layout/meta.tsx";
 import Terminal from "~/components/terminal/terminal.tsx";
 import styles from "~/style/home.module.css";
 
-const title = "machnevegor";
+const title = "Egor Machnev";
 const description = "🐍Full stack developer in " +
   "Python and JS, designer and 3D modeler😏";
 
