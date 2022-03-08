@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "~/components/layout/layout.tsx";
-import Meta from "~/components/meta.tsx";
+import Meta from "~/components/layout/meta.tsx";
 import styles from "~/style/notfound.module.css";
 
 const title = "oops";
