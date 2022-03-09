@@ -54,7 +54,7 @@ export default function Terminal(
         <Line onTyped={() => setIsVisible(true)}>
           {`deno run ${filename}`}
         </Line>
-        {isVisible && <p>{children}</p>}
+        {isVisible && children}
       </div>
     </div>
   );
