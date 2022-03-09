@@ -11,8 +11,8 @@ interface MetaProps {
 
 // default meta
 const keywords = ["machnevegor", "developer", "coding"];
-const image = "https://machnevegor.com/logos/icon.png";
-const card = "summary";
+const image = "https://machnevegor.com/files/card.png";
+const card = "summary_large_image";
 const site = "@machnevegor";
 
 export default function Meta(
