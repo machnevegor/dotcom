@@ -9,10 +9,10 @@ interface MetaProps {
 
 // default meta
 const keys = ["machnevegor", "developer", "coding"];
-const preview = "/files/preview.png";
+const card = "/files/card.png";
 
 export default function Meta(
-  { title, description, keywords = keys, image = preview }: MetaProps,
+  { title, description, keywords = keys, image = card }: MetaProps,
 ) {
   return (
     <>
