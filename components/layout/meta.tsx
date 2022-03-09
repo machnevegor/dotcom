@@ -19,10 +19,12 @@ export default function Meta(
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(",")} />
 
+      <meta name="og:type" content="website" />
       <meta name="og:title" content={title} />
       <meta name="og:description" content={description} />
       <meta name="og:image" content={image} />
 
+      <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
