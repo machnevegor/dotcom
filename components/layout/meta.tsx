@@ -26,7 +26,7 @@ export default function Meta(
       <meta name="og:title" content={title} />
       <meta name="og:description" content={description} />
       <meta name="og:image" content={meta.image || image} />
-      <meta name="og:url" content="https://machnevegor.com/" />
+      <meta name="og:site_name" content={meta.site || site} />
 
       <meta name="twitter:card" content={meta.card || card} />
       <meta name="twitter:image" content={meta.image || image} />
