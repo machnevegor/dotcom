@@ -1,7 +1,7 @@
 .terminal
 {
-    width: 24rem;
-    height: 13.5rem;
+    width: 28rem;
+    height: 15.75rem;
     padding: 0.75rem;
 
     border: 1px solid var(--color-black);
@@ -55,6 +55,7 @@
     .terminal
     {
         width: 80vw;
+        height: 12rem;
     }
 
     .body
