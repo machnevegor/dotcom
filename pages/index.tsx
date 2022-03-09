@@ -7,8 +7,8 @@ import styles from "~/style/home.module.css";
 import Markdown from "marked-react";
 
 const title = "Egor Machnev | Hello";
-const description = "🐍Full stack developer in " +
-  "Python and JS, designer and 3D modeler😏";
+const description = "Full Stack developer in Deno " +
+  "and Python, slightly vector designer.";
 
 const resume = "https://docs.google.com/document/d/" +
   "1o8XloGaqtCceoNmCR07Pc0VSTYqxf1vgp0W8yPdT9tc";
