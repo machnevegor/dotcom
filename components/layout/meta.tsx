@@ -11,7 +11,7 @@ interface MetaProps {
 
 // default meta
 const keywords = ["machnevegor", "developer", "coding"];
-const image = "/logos/icon.png";
+const image = "https://machnevegor.com/logos/icon.png";
 const card = "summary";
 const site = "@machnevegor";
 
