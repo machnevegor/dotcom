@@ -6,7 +6,7 @@ import styles from "~/style/home.module.css";
 
 import Markdown from "marked-react";
 
-const title = "Terminal | Egor Machnev";
+const title = "Egor Machnev | Hello";
 const description = "🐍Full stack developer in " +
   "Python and JS, designer and 3D modeler😏";
 
