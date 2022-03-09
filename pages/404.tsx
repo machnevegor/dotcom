@@ -11,7 +11,7 @@ export default function NotFound() {
     <Layout>
       <head>
         <title>{title}</title>
-        <Meta title={title} description={description} />
+        <meta name="robots" content="noindex" />
       </head>
       <main className={styles.page}>
         <img src="/icons/fallback.svg" alt="machnevegor's logo" />
