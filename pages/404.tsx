@@ -1,16 +1,12 @@
 import React from "react";
 import Layout from "~/components/layout/layout.tsx";
-import Meta from "~/components/layout/meta.tsx";
 import styles from "~/style/notfound.module.css";
-
-const title = "oops";
-const description = "page not found. try again later...";
 
 export default function NotFound() {
   return (
     <Layout>
       <head>
-        <title>{title}</title>
+        <title>oops</title>
         <meta name="robots" content="noindex" />
       </head>
       <main className={styles.page}>

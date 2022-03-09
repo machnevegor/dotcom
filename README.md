@@ -8,9 +8,9 @@ Personal website written in [Deno](https://deno.land) and
 
 ### System Requirements
 
-- [Deno](https://deno.land/) 1.13+
+- [Deno](https://deno.land) 1.13+
 - [Aleph.js](https://deno.land/x/aleph) 0.3.0+
-- [VS Code](https://code.visualstudio.com/) with
+- [VS Code](https://code.visualstudio.com) with
   [deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno)
   (recommended)
 

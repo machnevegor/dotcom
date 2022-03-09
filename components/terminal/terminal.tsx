@@ -39,7 +39,7 @@ interface TerminalProps {
 }
 
 export default function Terminal(
-  { filename = "untitled", children }: TerminalProps,
+  { filename = "main.ts", children }: TerminalProps,
 ) {
   const [isVisible, setIsVisible] = useState(false);
 

@@ -24,11 +24,8 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout>
-      <head>
-        <title>{title}</title>
-        <Meta title={title} description={description} />
-      </head>
+    <Layout title={title}>
+      <Meta title={title} description={description} />
       <main className={styles.page}>
         <Terminal filename="hello.ts">
           <Markdown>{result}</Markdown>
