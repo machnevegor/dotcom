@@ -20,6 +20,7 @@ export default function Meta(
 ) {
   return (
     <head>
+      <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={(meta.keywords || keywords).join(",")} />
 
