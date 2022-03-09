@@ -9,7 +9,7 @@ interface MetaProps {
 
 // default meta
 const keys = ["machnevegor", "developer", "coding"];
-const preview = "/logos/icon.png";
+const preview = "/files/preview.png";
 
 export default function Meta(
   { title, description, keywords = keys, image = preview }: MetaProps,
@@ -26,7 +26,7 @@ export default function Meta(
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
     </>
   );
 }
