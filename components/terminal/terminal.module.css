@@ -27,6 +27,9 @@
 {
     font-size: 1.25rem;
 
+    overflow-y: auto;
+
+    height: 14.25rem;
     margin-top: 0.5rem;
 
     white-space: pre-wrap;
@@ -61,6 +64,8 @@
     .body
     {
         font-size: 0.875rem;
+    
+        height: 10.5rem;
     }
 
     .caret

@@ -1,16 +1,16 @@
-import React, { ReactNode } from "react";
+import React, { FC } from "react";
+import "~/style/reset.css";
 
-export default function Layout(
-  { children }: { children: ReactNode },
-) {
+const Layout: FC = ({ children }) => {
   return (
     <>
       <head>
-        <meta name="viewport" content="width=device-width" />
+        <meta name="google" content="notranslate" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="stylesheet" href="/style/reset.css" />
       </head>
       {children}
     </>
   );
-}
+};
+
+export default Layout;

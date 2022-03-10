@@ -1,24 +1,29 @@
-import React from "react";
+import React, { FC } from "react";
 
 interface MetaProps {
   title: string;
   description: string;
   keywords?: string[];
-  card?: "summary" | "summary_large_image";
+  card?:
+    | "summary"
+    | "summary_large_image"
+    | "player"
+    | "app";
   image?: string;
 }
 
 // default meta
-const keywords = ["machnevegor", "developer", "coding"];
+const keywords = ["machnevegor", "developer"];
 const card = "summary";
 const image = "https://machnevegor.com/logos/icon.png";
 
-export default function Meta(
-  { title, description, ...meta }: MetaProps,
-) {
+const Meta: FC<MetaProps> = (
+  { title, description, ...meta },
+) => {
   return (
     <head>
       <title>{title}</title>
+
       <meta name="description" content={description} />
       <meta name="keywords" content={(meta.keywords || keywords).join(",")} />
 
@@ -32,4 +37,6 @@ export default function Meta(
       <meta name="twitter:site" content="@machnevegor" />
     </head>
   );
-}
+};
+
+export default Meta;

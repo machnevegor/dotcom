@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import styles from "./terminal.module.css";
 
 interface LineProps {
@@ -8,9 +8,9 @@ interface LineProps {
   onTyped?: () => void;
 }
 
-export function Line(
-  { children, noPrompt = false, noCaret = false, onTyped }: LineProps,
-) {
+const Line: FC<LineProps> = (
+  { children, noPrompt = false, noCaret = false, onTyped },
+) => {
   const [typedText, setTypedText] = useState(noCaret ? children : "");
 
   useEffect(() => {
@@ -31,16 +31,15 @@ export function Line(
       {typedText !== children && <span className={styles.caret} />}
     </p>
   );
-}
+};
 
 interface TerminalProps {
   filename?: string;
-  children: ReactNode;
 }
 
-export default function Terminal(
-  { filename = "main.ts", children }: TerminalProps,
-) {
+const Terminal: FC<TerminalProps> = (
+  { filename = "main.ts", children },
+) => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
@@ -58,4 +57,6 @@ export default function Terminal(
       </div>
     </div>
   );
-}
+};
+
+export default Terminal;

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import Layout from "~/components/layout/layout.tsx";
-import styles from "~/style/notfound.module.css";
+import styles from "~/style/404.module.css";
 
-export default function NotFound() {
+const E404: FC = () => {
   return (
     <Layout>
       <head>
@@ -17,4 +17,6 @@ export default function NotFound() {
       </main>
     </Layout>
   );
-}
+};
+
+export default E404;

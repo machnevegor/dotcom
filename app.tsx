@@ -5,8 +5,8 @@ interface AppProps {
   pageProps: Record<string, unknown>;
 }
 
-export default function App(
-  { Page, pageProps }: AppProps,
-) {
+const App: FC<AppProps> = ({ Page, pageProps }) => {
   return <Page {...pageProps} />;
-}
+};
+
+export default App;
