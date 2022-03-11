@@ -7,11 +7,21 @@
     gap: 0.5rem;
     place-content: center;
     justify-items: center;
+
+    @supports (-webkit-touch-callout: none)
+    {
+        min-height: -webkit-fill-available;
+    }
 }
 
 .links
 {
     font-size: 1.25rem;
+
+    @media (max-width: 640px)
+    {
+        font-size: 1rem;
+    }
     
     span
     {
@@ -22,13 +32,5 @@
         &::after {
             content: "·";
         }
-    }
-}
-
-@media (max-width: 640px)
-{
-    .links
-    {
-        font-size: 1rem;
     }
 }
