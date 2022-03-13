@@ -3,15 +3,13 @@ import React, { FC } from "react";
 interface MetaProps {
   title: string;
   description: string;
-  keywords?: string[];
   card?: string;
   image?: string;
 }
 
 // default meta
-const keywords = ["machnevegor", "developer"];
-const card = "summary";
 const image = "https://machnevegor.com/logos/icon.png";
+const card = "summary";
 
 const Meta: FC<MetaProps> = (
   { title, description, ...meta },
@@ -22,7 +20,6 @@ const Meta: FC<MetaProps> = (
 
       <meta name="title" content={title} />
       <meta name="description" content={description} />
-      <meta name="keywords" content={(meta.keywords || keywords).join(",")} />
 
       <meta name="og:type" content="profile" />
       <meta name="og:title" content={title} />
