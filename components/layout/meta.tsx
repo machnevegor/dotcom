@@ -3,8 +3,8 @@ import React, { FC } from "react";
 interface MetaProps {
   title: string;
   description: string;
-  card?: string;
   image?: string;
+  card?: string;
 }
 
 // default meta
@@ -27,10 +27,10 @@ const Meta: FC<MetaProps> = (
       <meta name="og:image" content={meta.image || image} />
       <meta name="og:site_name" content="machnevegor" />
 
+      <meta name="twitter:card" content={meta.card || card} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={meta.image || image} />
-      <meta name="twitter:card" content={meta.card || card} />
       <meta name="twitter:site" content="@machnevegor" />
     </head>
   );
