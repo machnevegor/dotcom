@@ -25,7 +25,7 @@ const Meta: FC<MetaProps> = (
       <meta name="og:title" content={title} />
       <meta name="og:description" content={description} />
       <meta name="og:image" content={meta.image || image} />
-      <meta name="og:site_name" content="machnevegor.com" />
+      <meta name="og:site_name" content="machnevegor" />
 
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
