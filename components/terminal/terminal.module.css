@@ -19,7 +19,7 @@
     height: 1rem;
     margin: 0 0.25rem;
 
-    border-radius: 0.5rem;
+    border-radius: 50%;
     background-color: var(--color-black);
 }
 
@@ -34,11 +34,6 @@
 
     white-space: pre-wrap;
     word-break: break-all;
-
-    a
-    {
-        color: var(--color-blue);
-    }
 }
 
 .caret

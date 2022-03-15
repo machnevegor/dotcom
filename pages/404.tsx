@@ -6,7 +6,7 @@ const E404: FC = () => {
   return (
     <Layout>
       <head>
-        <title>oops</title>
+        <title>oops...</title>
         <meta name="robots" content="noindex" />
       </head>
       <main className={styles.page}>
