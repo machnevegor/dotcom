@@ -3,15 +3,11 @@
     display: grid;
 
     min-height: 100vh;
+    min-height: fill-available;
 
     gap: 0.5rem;
     place-content: center;
     justify-items: center;
-
-    @supports (-webkit-touch-callout: none)
-    {
-        min-height: -webkit-fill-available;
-    }
 }
 
 .links
