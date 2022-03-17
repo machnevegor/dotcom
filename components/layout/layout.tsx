@@ -5,6 +5,7 @@ const Layout: FC = ({ children }) => {
   return (
     <>
       <head>
+        <meta name="theme-color" content="white" />
         <meta name="google" content="notranslate" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>

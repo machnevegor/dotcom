@@ -1,5 +1,7 @@
 .page
 {
+    font-size: 1.5rem;
+
     display: grid;
 
     min-height: 100vh;
@@ -8,31 +10,15 @@
     place-content: center;
     justify-items: center;
 
-    @supports (-webkit-touch-callout: none)
-    {
-        min-height: -webkit-fill-available;
-    }
-
     img
     {
         width: 12rem;
     }
-}
 
-.message
-{
-    font-size: 1.5rem;
-}
-
-@media (max-width: 640px)
-{
-    .page
-    {
-        gap: 0.5rem;
-    }
-
-    .message
+    @media (max-width: 640px)
     {
         font-size: 1rem;
+
+        gap: 0.5rem;
     }
 }

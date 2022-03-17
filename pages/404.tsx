@@ -11,7 +11,7 @@ const E404: FC = () => {
       </head>
       <main className={styles.page}>
         <img src="/icons/fallback.svg" alt="machnevegor's logo" />
-        <p className={styles.message}>
+        <p>
           Oops... Contact <a href="https://t.me/machnevegor">me</a>?
         </p>
       </main>

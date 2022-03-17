@@ -7,27 +7,17 @@
     gap: 0.5rem;
     place-content: center;
     justify-items: center;
-
-    @supports (-webkit-touch-callout: none)
-    {
-        min-height: -webkit-fill-available;
-    }
 }
 
 .links
 {
     font-size: 1.25rem;
-    
-    @media (max-width: 640px)
-    {
-        font-size: 1rem;
-    }
 
     a
     {
         color: var(--color-black);
     }
-    
+
     span
     {
         margin: 0 0.5rem;
@@ -37,5 +27,10 @@
         &::after {
             content: "·";
         }
+    }
+
+    @media (max-width: 640px)
+    {
+        font-size: 1rem;
     }
 }
