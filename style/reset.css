@@ -24,12 +24,6 @@
     background: transparent;
 }
 
-html,
-body
-{
-    height: 100%;
-}
-
 body
 {
     font-family: "Source Code Pro", monospace;
