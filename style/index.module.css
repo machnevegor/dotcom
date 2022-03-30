@@ -2,8 +2,8 @@
 {
     display: grid;
 
-    min-height: 100vh;
-    min-height: fill-available;
+    height: 100vh;
+    height: fill-available;
 
     gap: 0.5rem;
     place-content: center;
