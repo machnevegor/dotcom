@@ -10,11 +10,6 @@
     place-content: center;
     justify-items: center;
 
-    @supports (appearance: none)
-    {
-        min-height: fill-available;
-    }
-
     img
     {
         width: 12rem;

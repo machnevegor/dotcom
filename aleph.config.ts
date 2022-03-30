@@ -8,6 +8,7 @@ export default <Config> {
     postcss: {
       plugins: [
         "postcss-nested",
+        "postcss-100vh-fix",
         "autoprefixer",
       ],
     },
