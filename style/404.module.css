@@ -5,11 +5,15 @@
     display: grid;
 
     min-height: 100vh;
-    min-height: stretch;
 
     gap: 0.75rem;
     place-content: center;
     justify-items: center;
+
+    @supports (appearance: none)
+    {
+        min-height: fill-available;
+    }
 
     img
     {
