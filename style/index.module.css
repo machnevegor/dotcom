@@ -24,8 +24,7 @@
 
         color: var(--color-green);
 
-        &::after
-        {
+        &::after {
             content: "·";
         }
     }
