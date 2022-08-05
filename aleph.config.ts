@@ -7,9 +7,6 @@ export default <Config> {
         "postcss-nested",
         "autoprefixer",
       ],
-      modules: {
-        scopeBehaviour: "local",
-      },
     },
   },
 };
