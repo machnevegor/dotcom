@@ -5,9 +5,11 @@ export default <Config> {
     postcss: {
       plugins: [
         "postcss-nested",
-        "postcss-modules",
         "autoprefixer",
       ],
+      modules: {
+        scopeBehaviour: "local",
+      },
     },
   },
 };
