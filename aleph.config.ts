@@ -5,6 +5,7 @@ export default <Config> {
     postcss: {
       plugins: [
         "postcss-nested",
+        "postcss-modules",
         "autoprefixer",
       ],
     },
