@@ -2,7 +2,7 @@ import blog from "https://deno.land/x/blog@0.4.2/blog.tsx";
 
 blog({
   title: "Egor Machnev",
-  description: "machnevegor",
+  description: "Full Stack developer in Deno and Python, slightly vector designer.",
   avatar: "./assets/icon.svg",
   author: "Egor Machnev",
   links: [
