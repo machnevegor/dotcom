@@ -1,4 +1,4 @@
-import blog, { ga } from "https://deno.land/x/blog/blog.tsx";
+import blog from "https://deno.land/x/blog@0.4.2/blog.tsx";
 
 blog({
   title: "Egor Machnev",
@@ -9,9 +9,6 @@ blog({
   links: [
     { title: "Email", url: "mailto:egorikhelp@gmail.com" },
     { title: "GitHub", url: "https://github.com/machnevegor" },
-  ],
-  middlewares: [
-    ga("G-K2TLBLL972"),
   ],
   favicon: "./assets/logo.svg",
 });
