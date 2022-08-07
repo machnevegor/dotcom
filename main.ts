@@ -9,6 +9,5 @@ blog({
     { title: "Email", url: "mailto:egorikhelp@gmail.com" },
     { title: "GitHub", url: "https://github.com/machnevegor" },
   ],
-  theme: "light",
   favicon: "./assets/logo.svg",
 });
