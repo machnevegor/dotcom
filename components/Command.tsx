@@ -6,13 +6,11 @@ export interface CommandProps {
   onTyped?: () => void;
 }
 
-export default function Command({ children, delay, onTyped }: CommandProps) {
+export default function Command({ children, ...options }: CommandProps) {
   return (
     <p className="font-mono text-xl">
       <span className="color-blue">machnevegor</span> ~{" "}
-      <Caret className="caret" delay={delay} onTyped={onTyped}>
-        {children}
-      </Caret>
+      <Caret className="caret" {...options}>{children}</Caret>
     </p>
   );
 }
