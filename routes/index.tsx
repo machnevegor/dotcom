@@ -16,7 +16,6 @@ export default function Index() {
         Innopolis University
       </a>, Department of Data Analysis and AI.
     </p>,
-
     // editor
     <Command
       delay={5000}
@@ -28,39 +27,27 @@ export default function Index() {
       deno run editor.ts
     </Command>,
     <p className="font-mono text-xl">
-      <Caret
-        className="inline-block w-3 h-6 align-sub bg-black"
-        delay={1000}
-        onTyped={() => setLower(lower + 2)}
-      >
+      <Caret className="caret" delay={1000} onTyped={() => setLower(lower + 2)}>
         I have two years of commercial experience in frontend and backend
         development.
       </Caret>
     </p>,
     <br />,
     <p className="font-mono text-xl">
-      <Caret
-        className="inline-block w-3 h-6 align-sub bg-black"
-        delay={1000}
-        onTyped={() => setLower(lower + 2)}
-      >
+      <Caret className="caret" delay={1000} onTyped={() => setLower(lower + 2)}>
         TypeScript • Python • Rust
       </Caret>
     </p>,
     <br />,
     <p className="font-mono text-xl">
-      <Caret
-        className="inline-block w-3 h-6 align-sub bg-black"
-        delay={3000}
-        onTyped={() => setLower(lower + 1)}
-      >
+      <Caret className="caret" delay={3000} onTyped={() => setLower(lower + 1)}>
         I am currently interested in graph theory, decentralized databases, and
         machine learning.
       </Caret>
     </p>,
     <p className="font-mono text-xl">
       <Caret
-        className="inline-block w-3 h-6 align-sub bg-black"
+        className="caret"
         delay={5000}
         onTyped={() => {
           setUpper(lower + 1);
@@ -70,7 +57,6 @@ export default function Index() {
         ...
       </Caret>
     </p>,
-
     // contacts
     <Command delay={3000} onTyped={() => setLower(lower + 8)}>
       deno run contacts.ts
