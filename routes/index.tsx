@@ -3,7 +3,7 @@ import Caret from "~/components/Caret.tsx";
 import Command from "~/components/Command.tsx";
 import Terminal from "~/components/Terminal.tsx";
 
-export default function Home() {
+export default function Index() {
   const [upper, setUpper] = useState<number>(0);
   const [lower, setLower] = useState<number>(0);
 
