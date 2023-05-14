@@ -10,7 +10,7 @@ export default function Command({ children, delay, onTyped }: CommandProps) {
   return (
     <p className="font-mono text-xl">
       <span className="color-blue">machnevegor</span> ~{" "}
-      <Caret className="caret" delay={delay} onTyped={() => onTyped?.()}>
+      <Caret className="caret" delay={delay} onTyped={onTyped}>
         {children}
       </Caret>
     </p>
