@@ -6,7 +6,7 @@ export default function Terminal({ children }: { children: React.ReactNode }) {
         <span className="w-4 h-4 rounded-full bg-black" />
         <span className="w-4 h-4 rounded-full bg-black" />
       </div>
-      <div className="overflow-y-scroll h-83 sm:h-67 mt-3">{children}</div>
+      <div className="overflow-y-auto h-83 sm:h-67 mt-3">{children}</div>
     </div>
   );
 }
