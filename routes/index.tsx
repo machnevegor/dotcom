@@ -9,62 +9,63 @@ export default function Index() {
 
   const frames = [
     // welcome
-    <Command onTyped={() => setLower(lower + 2)}>deno run welcome.ts</Command>,
-    <p className="font-mono text-xl">
+    <Command onTyped={() => setLower(lower + 2)} key={0}>
+      deno run welcome.ts
+    </Command>,
+    <p className="font-mono text-xl" key={1}>
       Hi! My name is Egor Machnev. I am a student of{" "}
       <a className="color-green" href="https://innopolis.university/">
         Innopolis University
       </a>, Department of Data Analysis and AI.
     </p>,
-    // editor
+    // clear
     <Command
       delay={5000}
       onTyped={() => {
         setUpper(lower + 1);
         setLower(lower + 1);
       }}
+      key={2}
     >
+      clear
+    </Command>,
+    // editor
+    <Command onTyped={() => setLower(lower + 1)} key={3}>
       deno run editor.ts
     </Command>,
-    <p className="font-mono text-xl">
+    <p className="font-mono text-xl" key={4}>
       <Caret className="caret" delay={1000} onTyped={() => setLower(lower + 2)}>
         I have two years of commercial experience in frontend and backend
         development.
       </Caret>
     </p>,
-    <br />,
-    <p className="font-mono text-xl">
+    <br key={5} />,
+    <p className="font-mono text-xl" key={6}>
       <Caret className="caret" delay={1000} onTyped={() => setLower(lower + 2)}>
         TypeScript • Python • Rust
       </Caret>
     </p>,
-    <br />,
-    <p className="font-mono text-xl">
-      <Caret className="caret" delay={3000} onTyped={() => setLower(lower + 1)}>
+    <br key={7} />,
+    <p className="font-mono text-xl" key={8}>
+      <Caret className="caret" delay={3000} onTyped={() => setLower(lower + 2)}>
         I am currently interested in graph theory, decentralized databases, and
         machine learning.
       </Caret>
     </p>,
-    <p className="font-mono text-xl">
-      <Caret
-        className="caret"
-        delay={5000}
-        onTyped={() => {
-          setUpper(lower + 1);
-          setLower(lower + 1);
-        }}
-      >
+    <br key={9} />,
+    <p className="font-mono text-xl" key={10}>
+      <Caret className="caret" delay={5000} onTyped={() => setLower(lower + 1)}>
         ...
       </Caret>
     </p>,
     // contacts
-    <Command delay={3000} onTyped={() => setLower(lower + 2)}>
+    <Command delay={3000} onTyped={() => setLower(lower + 2)} key={11}>
       deno run contact.ts
     </Command>,
-    <p className="font-mono text-xl">
+    <p className="font-mono text-xl" key={12}>
       1) <a className="color-green" href="https://t.me/machnevegor">Telegram</a>
     </p>,
-    <p className="font-mono text-xl">
+    <p className="font-mono text-xl" key={13}>
       2){" "}
       <a className="color-green" href="https://github.com/machnevegor">
         GitHub
