@@ -26,7 +26,7 @@ export default function Index() {
       setHistory(history);
       setIsTyped(false);
     },
-    [history.length],
+    [history],
   );
 
   const contact = useCallback(
@@ -40,7 +40,7 @@ export default function Index() {
       setHistory(history);
       setIsTyped(false);
     },
-    [history.length],
+    [history],
   );
 
   const welcome = useCallback(
@@ -54,7 +54,7 @@ export default function Index() {
       setHistory(history);
       setIsTyped(false);
     },
-    [history.length],
+    [history],
   );
 
   const dungeon = useRef<HTMLDivElement>(null);
