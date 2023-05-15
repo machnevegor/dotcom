@@ -8,7 +8,7 @@ export interface BioProps {
 
 export default function Bio(args: BioProps) {
   return (
-    <Frame command="cat README.txt" {...args}>
+    <Frame command="cat README.md" {...args}>
       <p className="font-mono text-xl">
         I have two years of commercial experience in frontend and backend
         development.

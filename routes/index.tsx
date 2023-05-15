@@ -3,7 +3,7 @@ import Bio from "~/components/frame/Bio.tsx";
 import Choice from "~/components/frame/Choice.tsx";
 import Contact from "~/components/frame/Contact.tsx";
 import Welcome from "~/components/frame/Welcome.tsx";
-import Command from "~/components/terminal/Command.tsx";
+import Line from "~/components/terminal/Line.tsx";
 import Terminal from "~/components/terminal/Terminal.tsx";
 
 const links = [
@@ -15,11 +15,11 @@ export default function Index() {
   const [history, setHistory] = useState<React.ReactNode[]>([]);
   const [isTyped, setIsTyped] = useState<boolean>(false);
 
-  const welcome = useCallback(
+  const bio = useCallback(
     () => {
       history.push(
         <li key={history.length}>
-          <Welcome directory="~/" onTyped={() => setIsTyped(true)} />
+          <Bio directory="~/" onTyped={() => setIsTyped(true)} />
         </li>,
       );
 
@@ -47,11 +47,11 @@ export default function Index() {
     [history.length],
   );
 
-  const bio = useCallback(
+  const welcome = useCallback(
     () => {
       history.push(
         <li key={history.length}>
-          <Bio directory="~/" onTyped={() => setIsTyped(true)} />
+          <Welcome directory="~/" onTyped={() => setIsTyped(true)} />
         </li>,
       );
 
@@ -75,15 +75,21 @@ export default function Index() {
           directory="~/"
           command="ls"
           options={[
-            { name: "welcome.ts", callback: welcome },
+            { name: "README.md", callback: bio },
             { name: "contact.ts", callback: contact },
-            { name: "README.txt", callback: bio },
+            { name: "welcome.ts", callback: welcome },
           ]}
           onTyped={() => setIsTyped(true)}
           disabled={!isTyped}
         />
         <ul>{history}</ul>
-        {isTyped && <Command directory="~/" />}
+        {isTyped && (
+          <Line directory="~/">
+            <span className="inline-block w-3 h-6 align-sub bg-black" />
+            {!history.length &&
+              <span className="opacity-40">{" "}choose a file</span>}
+          </Line>
+        )}
         <div ref={dungeon} />
       </Terminal>
     </main>
