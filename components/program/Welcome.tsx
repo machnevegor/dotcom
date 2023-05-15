@@ -1,12 +1,8 @@
-import Frame from "~/components/frame/Frame.tsx";
+import Program from "~/components/program/Program.tsx";
 
-export interface WelcomeProps {
-  onTyped?: () => void;
-}
-
-export default function Welcome(props: WelcomeProps) {
+export default function Welcome({ onTyped }: { onTyped?: () => void }) {
   return (
-    <Frame command="deno run welcome.ts" {...props}>
+    <Program command="deno run welcome.ts" onTyped={onTyped}>
       <p className="font-mono text-xl">
         Hi! My name is Egor Machnev. I am a student of{" "}
         <a
@@ -16,6 +12,6 @@ export default function Welcome(props: WelcomeProps) {
           Innopolis University
         </a>, Department of Data Analysis and AI.
       </p>
-    </Frame>
+    </Program>
   );
 }

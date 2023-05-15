@@ -1,4 +1,4 @@
-import Frame from "~/components/frame/Frame.tsx";
+import Program from "~/components/program/Program.tsx";
 
 export interface Link {
   title: string;
@@ -10,9 +10,9 @@ export interface ContactProps {
   onTyped?: () => void;
 }
 
-export default function Contact({ links, ...props }: ContactProps) {
+export default function Contact({ links, onTyped }: ContactProps) {
   return (
-    <Frame command="deno run contact.ts" {...props}>
+    <Program command="deno run contact.ts" onTyped={onTyped}>
       {links.map((link, i) => (
         <p className="font-mono text-xl" key={i}>
           {i + 1}){" "}
@@ -21,6 +21,6 @@ export default function Contact({ links, ...props }: ContactProps) {
           </a>
         </p>
       ))}
-    </Frame>
+    </Program>
   );
 }

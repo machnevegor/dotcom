@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import Bio from "~/components/frame/Bio.tsx";
-import Choice from "~/components/frame/Choice.tsx";
-import Contact from "~/components/frame/Contact.tsx";
-import Welcome from "~/components/frame/Welcome.tsx";
+import Bio from "~/components/program/Bio.tsx";
+import Choice from "~/components/program/Choice.tsx";
+import Contact from "~/components/program/Contact.tsx";
+import Welcome from "~/components/program/Welcome.tsx";
 import Line from "~/components/terminal/Line.tsx";
 import Terminal from "~/components/terminal/Terminal.tsx";
 

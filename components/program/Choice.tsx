@@ -1,4 +1,4 @@
-import Frame from "~/components/frame/Frame.tsx";
+import Program from "~/components/program/Program.tsx";
 
 export interface Option {
   name: string;
@@ -14,7 +14,7 @@ export interface ChoiceProps {
 
 export default function Choice({ options, disabled, ...props }: ChoiceProps) {
   return (
-    <Frame {...props}>
+    <Program {...props}>
       <div className="grid sm:grid-cols-3 justify-items-start">
         {options.map((option, i) => (
           <button
@@ -27,6 +27,6 @@ export default function Choice({ options, disabled, ...props }: ChoiceProps) {
           </button>
         ))}
       </div>
-    </Frame>
+    </Program>
   );
 }

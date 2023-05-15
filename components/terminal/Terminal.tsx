@@ -1,8 +1,4 @@
-export interface TerminalProps {
-  children: React.ReactNode;
-}
-
-export default function Terminal({ children }: TerminalProps) {
+export default function Terminal({ children }: { children: React.ReactNode }) {
   return (
     <div className="w-90vw sm:w-lg h-sm sm:h-xs p-3 rd-3 shadow-lg">
       <div className="flex gap-2">

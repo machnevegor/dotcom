@@ -6,10 +6,10 @@ export interface CommandProps {
   onTyped?: () => void;
 }
 
-export default function Command({ children, ...props }: CommandProps) {
+export default function Command({ children, onTyped }: CommandProps) {
   return (
     <Line>
-      <Caret {...props}>{children}</Caret>
+      <Caret onTyped={onTyped}>{children}</Caret>
     </Line>
   );
 }

@@ -1,12 +1,8 @@
-import Frame from "~/components/frame/Frame.tsx";
+import Program from "~/components/program/Program.tsx";
 
-export interface BioProps {
-  onTyped?: () => void;
-}
-
-export default function Bio(props: BioProps) {
+export default function Bio({ onTyped }: { onTyped?: () => void }) {
   return (
-    <Frame command="cat README.md" {...props}>
+    <Program command="cat README.md" onTyped={onTyped}>
       <p className="font-mono text-xl">
         I have two years of commercial experience in frontend and backend
         development.
@@ -18,6 +14,6 @@ export default function Bio(props: BioProps) {
         I am currently interested in graph theory, decentralized databases, and
         machine learning.
       </p>
-    </Frame>
+    </Program>
   );
 }
