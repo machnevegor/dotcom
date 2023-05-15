@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import Bio from "~/components/program/Bio.tsx";
-import Choice from "~/components/program/Choice.tsx";
-import Contact from "~/components/program/Contact.tsx";
-import Welcome from "~/components/program/Welcome.tsx";
+import Bio from "~/components/command/Bio.tsx";
+import Choice from "~/components/command/Choice.tsx";
+import Contact from "~/components/command/Contact.tsx";
+import Welcome from "~/components/command/Welcome.tsx";
 import Line from "~/components/terminal/Line.tsx";
 import Terminal from "~/components/terminal/Terminal.tsx";
 
@@ -68,7 +68,7 @@ export default function Index() {
     <main className="grid h-[calc(100dvh)] place-content-center">
       <Terminal>
         <Choice
-          command="ls"
+          name="ls"
           options={[
             { name: "README.md", callback: bio },
             { name: "contact.ts", callback: contact },
