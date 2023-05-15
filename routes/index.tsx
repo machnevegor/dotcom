@@ -58,15 +58,9 @@ export default function Index() {
       </Caret>
     </p>,
     // contacts
-    <Command delay={3000} onTyped={() => setLower(lower + 8)}>
-      deno run contacts.ts
+    <Command delay={3000} onTyped={() => setLower(lower + 2)}>
+      deno run contact.ts
     </Command>,
-    <p className="font-mono text-xl">⣿⣿⣿⣿⡿⠃⢸⣿⡟⠀</p>,
-    <p className="font-mono text-xl">⣿⣿⣿⡟⢡⡆⢸⠏⣰⠀</p>,
-    <p className="font-mono text-xl">⣿⣿⠟⣠⣿⡇⠈⣴⢿⠀</p>,
-    <p className="font-mono text-xl">⣿⠏⣰⣿⠀⣧⣼⣿⢸⣦</p>,
-    <p className="font-mono text-xl">⠃⣼⣿⣿⣦⣿⣿⣿⣼⣿</p>,
-    <br />,
     <p className="font-mono text-xl">
       1) <a className="color-green" href="https://t.me/machnevegor">Telegram</a>
     </p>,
