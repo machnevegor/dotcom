@@ -1,14 +1,12 @@
 import Frame from "~/components/frame/Frame.tsx";
 
 export interface BioProps {
-  directory: string;
-  delay?: number;
   onTyped?: () => void;
 }
 
-export default function Bio(args: BioProps) {
+export default function Bio(props: BioProps) {
   return (
-    <Frame command="cat README.md" {...args}>
+    <Frame command="cat README.md" {...props}>
       <p className="font-mono text-xl">
         I have two years of commercial experience in frontend and backend
         development.

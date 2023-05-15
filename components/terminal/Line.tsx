@@ -1,12 +1,11 @@
 export interface LineProps {
-  directory: string;
   children?: React.ReactNode;
 }
 
-export default function Line({ directory, children }: LineProps) {
+export default function Line({ children }: LineProps) {
   return (
     <p className="font-mono text-xl">
-      <span className="color-blue">machnevegor</span> {directory} {children}
+      <span className="color-blue">machnevegor</span> ~/ {children}
     </p>
   );
 }

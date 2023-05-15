@@ -1,14 +1,12 @@
 import Frame from "~/components/frame/Frame.tsx";
 
 export interface WelcomeProps {
-  directory: string;
-  delay?: number;
   onTyped?: () => void;
 }
 
-export default function Welcome(args: WelcomeProps) {
+export default function Welcome(props: WelcomeProps) {
   return (
-    <Frame command="deno run welcome.ts" {...args}>
+    <Frame command="deno run welcome.ts" {...props}>
       <p className="font-mono text-xl">
         Hi! My name is Egor Machnev. I am a student of{" "}
         <a

@@ -19,7 +19,7 @@ export default function Index() {
     () => {
       history.push(
         <li key={history.length}>
-          <Bio directory="~/" onTyped={() => setIsTyped(true)} />
+          <Bio onTyped={() => setIsTyped(true)} />
         </li>,
       );
 
@@ -33,11 +33,7 @@ export default function Index() {
     () => {
       history.push(
         <li key={history.length}>
-          <Contact
-            directory="~/"
-            links={links}
-            onTyped={() => setIsTyped(true)}
-          />
+          <Contact links={links} onTyped={() => setIsTyped(true)} />
         </li>,
       );
 
@@ -51,7 +47,7 @@ export default function Index() {
     () => {
       history.push(
         <li key={history.length}>
-          <Welcome directory="~/" onTyped={() => setIsTyped(true)} />
+          <Welcome onTyped={() => setIsTyped(true)} />
         </li>,
       );
 
@@ -72,7 +68,6 @@ export default function Index() {
     <main className="grid h-[calc(100dvh)] place-content-center">
       <Terminal>
         <Choice
-          directory="~/"
           command="ls"
           options={[
             { name: "README.md", callback: bio },
@@ -84,7 +79,7 @@ export default function Index() {
         />
         <ul>{history}</ul>
         {isTyped && (
-          <Line directory="~/">
+          <Line>
             <span className="inline-block w-3 h-6 align-sub bg-black" />
             {!history.length &&
               <span className="opacity-40">{" "}choose a file</span>}

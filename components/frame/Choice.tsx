@@ -6,17 +6,15 @@ export interface Option {
 }
 
 export interface ChoiceProps {
-  directory: string;
   command: string;
   options: Option[];
-  delay?: number;
   onTyped?: () => void;
   disabled?: boolean;
 }
 
-export default function Choice({ options, disabled, ...args }: ChoiceProps) {
+export default function Choice({ options, disabled, ...props }: ChoiceProps) {
   return (
-    <Frame {...args}>
+    <Frame {...props}>
       <div className="grid sm:grid-cols-3 justify-items-start">
         {options.map((option, i) => (
           <button

@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 
 export interface CaretProps {
   children: string;
-  delay?: number;
   onTyped?: () => void;
 }
 
-export default function Caret({ children, delay = 240, onTyped }: CaretProps) {
+export default function Caret({ children, onTyped }: CaretProps) {
   const [buffer, setBuffer] = useState<string>("");
   const [cursor, setCursor] = useState<number>(0);
 
@@ -19,7 +18,7 @@ export default function Caret({ children, delay = 240, onTyped }: CaretProps) {
           setBuffer(buffer + children[cursor]);
           setCursor(cursor + 1);
         },
-        cursor ? 120 + 180 * (Math.random() - 0.5) : delay,
+        cursor ? 120 + 180 * (Math.random() - 0.5) : 240,
       );
 
       return () => clearTimeout(timer);

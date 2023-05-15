@@ -6,15 +6,13 @@ export interface Link {
 }
 
 export interface ContactProps {
-  directory: string;
   links: Link[];
-  delay?: number;
   onTyped?: () => void;
 }
 
-export default function Contact({ links, ...args }: ContactProps) {
+export default function Contact({ links, ...props }: ContactProps) {
   return (
-    <Frame command="deno run contact.ts" {...args}>
+    <Frame command="deno run contact.ts" {...props}>
       {links.map((link, i) => (
         <p className="font-mono text-xl" key={i}>
           {i + 1}){" "}
