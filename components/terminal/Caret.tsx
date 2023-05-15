@@ -2,14 +2,11 @@ import { useEffect, useState } from "react";
 
 export interface CaretProps {
   children: string;
-  className?: string;
   delay?: number;
   onTyped?: () => void;
 }
 
-export default function Caret(
-  { children, className, delay = 240, onTyped }: CaretProps,
-) {
+export default function Caret({ children, delay = 240, onTyped }: CaretProps) {
   const [buffer, setBuffer] = useState<string>("");
   const [cursor, setCursor] = useState<number>(0);
 
@@ -33,7 +30,8 @@ export default function Caret(
   return (
     <>
       {buffer}
-      {cursor !== children.length && <span className={className} />}
+      {cursor !== children.length &&
+        <span className="inline-block w-3 h-6 align-sub bg-black" />}
     </>
   );
 }
