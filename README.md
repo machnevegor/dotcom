@@ -1,4 +1,4 @@
-A personal website written in [Deno](https://deno.land/) and
-[Aleph.js](https://aleph.deno.dev/).
+Personal website powered by [Aleph.js](https://aleph.deno.dev/) and
+[Deno](https://deno.land/).
 
 > https://machnevegor.com/
