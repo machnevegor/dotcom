@@ -11,8 +11,8 @@ export default function Bio({ onTyped }: { onTyped?: () => void }) {
       <p className="font-mono text-xl">TypeScript • Python • Rust</p>
       <br />
       <p className="font-mono text-xl">
-        I am currently interested in graph theory, decentralized databases, and
-        machine learning.
+        I do graph theory, decentralized data execution and storage. Currently I
+        am interested in machine learning.
       </p>
     </Command>
   );
