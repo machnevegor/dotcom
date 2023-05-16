@@ -12,49 +12,49 @@ const links = [
 ];
 
 export default function Index() {
-  const [history, setHistory] = useState<React.ReactNode[]>([]);
+  const [content, setContent] = useState<React.ReactNode[]>([]);
   const [isTyped, setIsTyped] = useState<boolean>(false);
 
   const bio = useCallback(
     () => {
-      history.push(
-        <li key={history.length}>
+      content.push(
+        <li key={content.length}>
           <Bio onTyped={() => setIsTyped(true)} />
         </li>,
       );
 
-      setHistory(history);
+      setContent(content);
       setIsTyped(false);
     },
-    [history],
+    [content],
   );
 
   const contact = useCallback(
     () => {
-      history.push(
-        <li key={history.length}>
+      content.push(
+        <li key={content.length}>
           <Contact links={links} onTyped={() => setIsTyped(true)} />
         </li>,
       );
 
-      setHistory(history);
+      setContent(content);
       setIsTyped(false);
     },
-    [history],
+    [content],
   );
 
   const welcome = useCallback(
     () => {
-      history.push(
-        <li key={history.length}>
+      content.push(
+        <li key={content.length}>
           <Welcome onTyped={() => setIsTyped(true)} />
         </li>,
       );
 
-      setHistory(history);
+      setContent(content);
       setIsTyped(false);
     },
-    [history],
+    [content],
   );
 
   const dungeon = useRef<HTMLDivElement>(null);
@@ -77,11 +77,11 @@ export default function Index() {
           onTyped={() => setIsTyped(true)}
           disabled={!isTyped}
         />
-        <ul>{history}</ul>
+        <ul>{content}</ul>
         {isTyped && (
           <Line>
             <span className="inline-block w-3 h-6 align-sub bg-black" />
-            {!history.length &&
+            {!content.length &&
               <span className="opacity-40">{" "}choose a file</span>}
           </Line>
         )}
