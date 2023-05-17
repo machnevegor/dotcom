@@ -5,13 +5,7 @@ import Program from "~/components/program/Program.tsx";
 export default function Welcome({ onDone }: { onDone?: () => void }) {
   const onTyped = useCallback(
     () => {
-      confetti({
-        spread: 180,
-        origin: {
-          y: 0,
-        },
-        disableForReducedMotion: true,
-      });
+      confetti({ spread: 120, origin: { y: 1.2 } });
 
       onDone?.();
     },
