@@ -12,9 +12,11 @@ export interface ChoiceProps {
   disabled?: boolean;
 }
 
-export default function Choice({ options, disabled, ...props }: ChoiceProps) {
+export default function Choice(
+  { name, options, onTyped, disabled }: ChoiceProps,
+) {
   return (
-    <Command {...props}>
+    <Command name={name} onTyped={onTyped}>
       <div className="grid sm:grid-cols-3 justify-items-start">
         {options.map((option, i) => (
           <button
