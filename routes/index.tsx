@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import Bio from "~/components/command/Bio.tsx";
-import Choice from "~/components/command/Choice.tsx";
-import Contact from "~/components/command/Contact.tsx";
-import Welcome from "~/components/command/Welcome.tsx";
+import Bio from "~/components/program/Bio.tsx";
+import Choice from "~/components/program/Choice.tsx";
+import Contact from "~/components/program/Contact.tsx";
+import Welcome from "~/components/program/Welcome.tsx";
+import Caret from "~/components/terminal/Caret.tsx";
+import Hint from "~/components/terminal/Hint.tsx";
 import Line from "~/components/terminal/Line.tsx";
 import Terminal from "~/components/terminal/Terminal.tsx";
 
@@ -19,7 +21,7 @@ export default function Index() {
     () => {
       history.push(
         <li key={history.length}>
-          <Bio onTyped={() => setIsTyped(true)} />
+          <Bio onDone={() => setIsTyped(true)} />
         </li>,
       );
 
@@ -33,7 +35,7 @@ export default function Index() {
     () => {
       history.push(
         <li key={history.length}>
-          <Contact links={links} onTyped={() => setIsTyped(true)} />
+          <Contact links={links} onDone={() => setIsTyped(true)} />
         </li>,
       );
 
@@ -47,7 +49,7 @@ export default function Index() {
     () => {
       history.push(
         <li key={history.length}>
-          <Welcome onTyped={() => setIsTyped(true)} />
+          <Welcome onDone={() => setIsTyped(true)} />
         </li>,
       );
 
@@ -65,24 +67,28 @@ export default function Index() {
   );
 
   return (
-    <main className="grid h-[calc(100dvh)] place-content-center">
+    <main className="grid h-[100dvh] place-content-center">
       <Terminal>
         <Choice
-          name="ls"
+          command="ls"
           options={[
             { name: "README.md", callback: bio },
             { name: "contact.ts", callback: contact },
             { name: "welcome.ts", callback: welcome },
           ]}
-          onTyped={() => setIsTyped(true)}
+          onDone={() => setIsTyped(true)}
           disabled={!isTyped}
         />
         <ul>{history}</ul>
         {isTyped && (
           <Line>
-            <span className="inline-block w-3 h-6 align-sub bg-black" />
-            {!history.length &&
-              <span className="opacity-40">{" "}choose a file</span>}
+            <Caret />
+            {!history.length && (
+              <>
+                {" "}
+                <Hint>choose a file</Hint>
+              </>
+            )}
           </Line>
         )}
         <div ref={dungeon} />

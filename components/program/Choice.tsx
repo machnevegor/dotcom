@@ -1,4 +1,4 @@
-import Command from "~/components/command/Command.tsx";
+import Program from "~/components/program/Program.tsx";
 
 export interface Option {
   name: string;
@@ -6,29 +6,29 @@ export interface Option {
 }
 
 export interface ChoiceProps {
-  name: string;
+  command: string;
   options: Option[];
-  onTyped?: () => void;
+  onDone?: () => void;
   disabled?: boolean;
 }
 
 export default function Choice(
-  { name, options, onTyped, disabled }: ChoiceProps,
+  { command, options, onDone, disabled }: ChoiceProps,
 ) {
   return (
-    <Command name={name} onTyped={onTyped}>
+    <Program command={command} onStart={onDone}>
       <div className="grid sm:grid-cols-3 justify-items-start">
         {options.map((option, i) => (
           <button
+            key={i}
             className="font-mono text-xl color-green @hover:underline"
             disabled={disabled}
             onClick={option.callback}
-            key={i}
           >
             {option.name}
           </button>
         ))}
       </div>
-    </Command>
+    </Program>
   );
 }

@@ -1,8 +1,8 @@
-import Command from "~/components/command/Command.tsx";
+import Program from "~/components/program/Program.tsx";
 
-export default function Welcome({ onTyped }: { onTyped?: () => void }) {
+export default function Welcome({ onDone }: { onDone?: () => void }) {
   return (
-    <Command name="deno run welcome.ts" onTyped={onTyped}>
+    <Program command="deno run welcome.ts" onStart={onDone}>
       <p className="font-mono text-xl">
         Hi! My name is Egor Machnev. I am a student of{" "}
         <a
@@ -12,6 +12,6 @@ export default function Welcome({ onTyped }: { onTyped?: () => void }) {
           Innopolis University
         </a>, Department of Data Analysis and AI.
       </p>
-    </Command>
+    </Program>
   );
 }

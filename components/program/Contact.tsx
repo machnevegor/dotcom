@@ -1,4 +1,4 @@
-import Command from "~/components/command/Command.tsx";
+import Program from "~/components/program/Program.tsx";
 
 export interface Link {
   title: string;
@@ -7,20 +7,20 @@ export interface Link {
 
 export interface ContactProps {
   links: Link[];
-  onTyped?: () => void;
+  onDone?: () => void;
 }
 
-export default function Contact({ links, onTyped }: ContactProps) {
+export default function Contact({ links, onDone }: ContactProps) {
   return (
-    <Command name="deno run contact.ts" onTyped={onTyped}>
+    <Program command="deno run contact.ts" onStart={onDone}>
       {links.map((link, i) => (
-        <p className="font-mono text-xl" key={i}>
+        <p key={i} className="font-mono text-xl">
           {i + 1}){" "}
           <a className="color-green @hover:underline" href={link.url}>
             {link.title}
           </a>
         </p>
       ))}
-    </Command>
+    </Program>
   );
 }
