@@ -13,6 +13,7 @@ export default function Program({ command, children, onStart }: ProgramProps) {
   const onTyped = useCallback(
     () => {
       setIsTyped(true);
+
       onStart?.();
     },
     [],
