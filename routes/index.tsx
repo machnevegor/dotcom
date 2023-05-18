@@ -59,10 +59,10 @@ export default function Index() {
     [history],
   );
 
-  const dungeon = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(
-    () => dungeon.current?.scrollIntoView({ behavior: "smooth" }),
+    () => bottomRef.current?.scrollIntoView({ behavior: "smooth" }),
     [isTyped],
   );
 
@@ -91,7 +91,7 @@ export default function Index() {
             )}
           </Line>
         )}
-        <div ref={dungeon} />
+        <div ref={bottomRef} />
       </Terminal>
     </main>
   );
