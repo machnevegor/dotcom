@@ -9,9 +9,10 @@ import Hint from "~/components/terminal/Hint.tsx";
 import Line from "~/components/terminal/Line.tsx";
 import Terminal from "~/components/terminal/Terminal.tsx";
 
-const links = [
-  { "title": "GitHub", "url": "https://github.com/machnevegor" },
-  { "title": "Telegram", "url": "https://t.me/machnevegor" },
+const LINKS = [
+  { title: "GitHub", url: "https://github.com/machnevegor" },
+  { title: "Telegram", url: "https://t.me/machnevegor" },
+  { title: "Twitter", url: "https://twitter.com/machnevegor" },
 ];
 
 export default function Index() {
@@ -36,7 +37,7 @@ export default function Index() {
     () => {
       history.push(
         <li key={history.length}>
-          <Contact links={links} onDone={() => setIsTyped(true)} />
+          <Contact links={LINKS} onDone={() => setIsTyped(true)} />
         </li>,
       );
 
