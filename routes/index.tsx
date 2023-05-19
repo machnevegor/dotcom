@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+
 import Bio from "~/components/program/Bio.tsx";
 import Choice from "~/components/program/Choice.tsx";
 import Contact from "~/components/program/Contact.tsx";
@@ -7,11 +8,7 @@ import Caret from "~/components/terminal/Caret.tsx";
 import Hint from "~/components/terminal/Hint.tsx";
 import Line from "~/components/terminal/Line.tsx";
 import Terminal from "~/components/terminal/Terminal.tsx";
-
-const links = [
-  { title: "GitHub", url: "https://github.com/machnevegor" },
-  { title: "Telegram", url: "https://t.me/machnevegor" },
-];
+import contacts from "~/data/contacts.json" assert { type: "json" };
 
 export default function Index() {
   const [history, setHistory] = useState<React.ReactNode[]>([]);
@@ -35,7 +32,7 @@ export default function Index() {
     () => {
       history.push(
         <li key={history.length}>
-          <Contact links={links} onDone={() => setIsTyped(true)} />
+          <Contact links={contacts} onDone={() => setIsTyped(true)} />
         </li>,
       );
 
