@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import Bio from "~/components/program/Bio.tsx";
 import Choice from "~/components/program/Choice.tsx";
+import type { Link } from "~/components/program/Contact.tsx";
 import Contact from "~/components/program/Contact.tsx";
 import Welcome from "~/components/program/Welcome.tsx";
 import Caret from "~/components/terminal/Caret.tsx";
@@ -9,10 +10,19 @@ import Hint from "~/components/terminal/Hint.tsx";
 import Line from "~/components/terminal/Line.tsx";
 import Terminal from "~/components/terminal/Terminal.tsx";
 
-const LINKS = [
-  { title: "GitHub", url: "https://github.com/machnevegor" },
-  { title: "Telegram", url: "https://t.me/machnevegor" },
-  { title: "Twitter", url: "https://twitter.com/machnevegor" },
+const LINKS: Link[] = [
+  {
+    title: "GitHub",
+    url: "https://github.com/machnevegor",
+  },
+  {
+    title: "Telegram",
+    url: "https://t.me/machnevegor",
+  },
+  {
+    title: "Twitter",
+    url: "https://twitter.com/machnevegor",
+  },
 ];
 
 export default function Index() {
