@@ -8,7 +8,11 @@ import Caret from "~/components/terminal/Caret.tsx";
 import Hint from "~/components/terminal/Hint.tsx";
 import Line from "~/components/terminal/Line.tsx";
 import Terminal from "~/components/terminal/Terminal.tsx";
-import contacts from "~/data/contacts.json" assert { type: "json" };
+
+const links = [
+  { "title": "GitHub", "url": "https://github.com/machnevegor" },
+  { "title": "Telegram", "url": "https://t.me/machnevegor" },
+];
 
 export default function Index() {
   const [history, setHistory] = useState<React.ReactNode[]>([]);
@@ -32,7 +36,7 @@ export default function Index() {
     () => {
       history.push(
         <li key={history.length}>
-          <Contact links={contacts} onDone={() => setIsTyped(true)} />
+          <Contact links={links} onDone={() => setIsTyped(true)} />
         </li>,
       );
 
