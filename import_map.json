@@ -9,13 +9,12 @@
     "aleph/plugins/unocss": "https://deno.land/x/aleph@1.0.0-beta.43/plugins/unocss.ts",
     "aleph/dev": "https://deno.land/x/aleph@1.0.0-beta.43/server/dev.ts",
     "aleph/server": "https://deno.land/x/aleph@1.0.0-beta.43/server/mod.ts",
-    "@unocss/core": "https://esm.sh/v120/@unocss/core@0.50.6",
-    "@unocss/preset-uno": "https://esm.sh/v120/@unocss/preset-uno@0.50.6",
-    "canvas-confetti": "https://esm.sh/v120/canvas-confetti@1.6.0",
-    "react-dom": "https://esm.sh/v120/react-dom@18.2.0",
-    "react-dom/": "https://esm.sh/v120/react-dom@18.2.0/",
-    "react": "https://esm.sh/v120/react@18.2.0",
-    "unocss-preset-scrollbar-hide": "https://esm.sh/v120/*unocss-preset-scrollbar-hide@1.0.1"
+    "@unocss/core": "https://esm.sh/v126/@unocss/core@0.50.6",
+    "@unocss/preset-uno": "https://esm.sh/v126/@unocss/preset-uno@0.50.6",
+    "react-dom": "https://esm.sh/v126/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/v126/react-dom@18.2.0/",
+    "react": "https://esm.sh/v126/react@18.2.0",
+    "unocss-preset-scrollbar-hide": "https://esm.sh/v126/*unocss-preset-scrollbar-hide@1.0.1"
   },
   "scopes": {}
 }
