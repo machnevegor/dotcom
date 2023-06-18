@@ -32,8 +32,11 @@ export default function Index() {
     () => {
       setHistory([
         ...history,
-        <Bio onDone={() => setIsTyped(true)} key={history.length} />,
+        <li key={history.length}>
+          <Bio onDone={() => setIsTyped(true)} />
+        </li>,
       ]);
+
       setIsTyped(false);
     },
     [history],
@@ -43,12 +46,11 @@ export default function Index() {
     () => {
       setHistory([
         ...history,
-        <Contact
-          links={LINKS}
-          onDone={() => setIsTyped(true)}
-          key={history.length}
-        />,
+        <li key={history.length}>
+          <Contact links={LINKS} onDone={() => setIsTyped(true)} />
+        </li>,
       ]);
+
       setIsTyped(false);
     },
     [history],
@@ -58,8 +60,11 @@ export default function Index() {
     () => {
       setHistory([
         ...history,
-        <Welcome onDone={() => setIsTyped(true)} key={history.length} />,
+        <li key={history.length}>
+          <Welcome onDone={() => setIsTyped(true)} />
+        </li>,
       ]);
+
       setIsTyped(false);
     },
     [history],
@@ -85,7 +90,7 @@ export default function Index() {
           onDone={() => setIsTyped(true)}
           disabled={!isTyped}
         />
-        {history}
+        <ul>{history}</ul>
         {isTyped && (
           <Line>
             <Caret />
