@@ -10,15 +10,15 @@
       "https://deno.land/x/aleph@1.0.0-beta.43/types.d.ts"
     ],
     "jsx": "react-jsx",
-    "jsxImportSource": "https://esm.sh/v120/react@18.2.0"
+    "jsxImportSource": "https://esm.sh/v126/react@18.2.0"
   },
   "importMap": "import_map.json",
   "tasks": {
     "dev": "deno run -A https://deno.land/x/aleph@1.0.0-beta.43/dev.ts",
     "start": "deno run -A server.ts",
     "build": "deno run -A server.ts --build",
-    "esm:add": "deno run -A https://esm.sh/v120 add",
-    "esm:update": "deno run -A https://esm.sh/v120 update",
-    "esm:remove": "deno run -A https://esm.sh/v120 remove"
+    "esm:add": "deno run -A https://esm.sh/v126 add",
+    "esm:update": "deno run -A https://esm.sh/v126 update",
+    "esm:remove": "deno run -A https://esm.sh/v126 remove"
   }
 }
