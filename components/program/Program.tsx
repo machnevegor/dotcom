@@ -1,5 +1,4 @@
 import { useCallback, useState } from "react";
-
 import Command from "~/components/terminal/Command.tsx";
 
 export interface ProgramProps {

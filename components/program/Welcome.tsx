@@ -1,6 +1,5 @@
-import { useCallback } from "react";
-
 import confetti from "canvas-confetti";
+import { useCallback } from "react";
 import Program from "~/components/program/Program.tsx";
 
 export default function Welcome({ onDone }: { onDone?: () => void }) {

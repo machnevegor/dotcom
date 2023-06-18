@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import Caret from "~/components/terminal/Caret.tsx";
 
 export interface TyperProps {

@@ -1,6 +1,6 @@
 export default function E404() {
   return (
-    <main className="grid h-[100dvh] gap-2 place-content-center justify-items-center">
+    <main className="grid h-100dvh gap-2 place-content-center justify-items-center">
       <img
         className="w-48"
         src="/assets/blinking-logo.svg"
