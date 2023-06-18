@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-
 import Bio from "~/components/program/Bio.tsx";
 import Choice from "~/components/program/Choice.tsx";
 import type { Link } from "~/components/program/Contact.tsx";
@@ -31,13 +30,10 @@ export default function Index() {
 
   const bio = useCallback(
     () => {
-      history.push(
-        <li key={history.length}>
-          <Bio onDone={() => setIsTyped(true)} />
-        </li>,
-      );
-
-      setHistory(history);
+      setHistory([
+        ...history,
+        <Bio onDone={() => setIsTyped(true)} key={history.length} />,
+      ]);
       setIsTyped(false);
     },
     [history],
@@ -45,13 +41,14 @@ export default function Index() {
 
   const contact = useCallback(
     () => {
-      history.push(
-        <li key={history.length}>
-          <Contact links={LINKS} onDone={() => setIsTyped(true)} />
-        </li>,
-      );
-
-      setHistory(history);
+      setHistory([
+        ...history,
+        <Contact
+          links={LINKS}
+          onDone={() => setIsTyped(true)}
+          key={history.length}
+        />,
+      ]);
       setIsTyped(false);
     },
     [history],
@@ -59,13 +56,10 @@ export default function Index() {
 
   const welcome = useCallback(
     () => {
-      history.push(
-        <li key={history.length}>
-          <Welcome onDone={() => setIsTyped(true)} />
-        </li>,
-      );
-
-      setHistory(history);
+      setHistory([
+        ...history,
+        <Welcome onDone={() => setIsTyped(true)} key={history.length} />,
+      ]);
       setIsTyped(false);
     },
     [history],
@@ -79,7 +73,7 @@ export default function Index() {
   );
 
   return (
-    <main className="grid h-[100dvh] place-content-center">
+    <main className="grid h-100dvh place-content-center">
       <Terminal>
         <Choice
           command="ls"
@@ -91,7 +85,7 @@ export default function Index() {
           onDone={() => setIsTyped(true)}
           disabled={!isTyped}
         />
-        <ul>{history}</ul>
+        {history}
         {isTyped && (
           <Line>
             <Caret />
