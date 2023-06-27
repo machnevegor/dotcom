@@ -4,8 +4,8 @@ export default function Bio({ onDone }: { onDone?: () => void }) {
   return (
     <Program command="cat README.md" onStart={onDone}>
       <p className="font-mono text-xl">
-        I am a Software Engineer since 2018. I have two years of commercial
-        experience in both front- and back-end development.
+        I have been a Software Engineer since 2018. I currently have two years
+        of commercial experience in both front- and back-end development.
       </p>
       <br />
       <p className="font-mono text-xl">- TypeScript</p>
