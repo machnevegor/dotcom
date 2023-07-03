@@ -10,7 +10,7 @@ export default function Welcome({ onDone }: { onDone?: () => void }) {
           href="https://innopolis.university/"
         >
           Innopolis University
-        </a>, Department of Data Analysis and AI.
+        </a>, Department of Data Science and AI.
       </p>
     </Program>
   );
